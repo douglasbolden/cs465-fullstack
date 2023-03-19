@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const hbs = require('hbs');
+require('./app_server/models/db');
 
 var aboutRouter = require('./app_server/routes/about');
 var contactRouter = require('./app_server/routes/contact');
@@ -13,7 +14,6 @@ var newsRouter = require('./app_server/routes/news');
 var roomsRouter = require('./app_server/routes/rooms');
 var travelRouter = require('./app_server/routes/travel');
 var usersRouter = require('./app_server/routes/users');
-
 
 var app = express();
 

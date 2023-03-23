@@ -1,11 +1,11 @@
-var fs = require('fs');
-var trips = JSON.parse(fs.readFileSync('./data/trips.json', 'utf8'));
+const mongoose = require('mongoose');
+const trips = mongoose.model('trips');
 
 /* GET travel view */
-const travel = (req, res) => {
+const travel = async (req, res) => {
     res.render('travel', {
         title: 'Travlr Getaways',
-        trips
+        trips: await trips.find({})
     });
 };
 

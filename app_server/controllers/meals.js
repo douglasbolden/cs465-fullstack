@@ -1,12 +1,11 @@
-var fs = require('fs');
-var mealposts = JSON.parse(fs.readFileSync('./data/meal-posts.json', 'utf8'));
-
+const mongoose = require('mongoose');
+const meal = mongoose.model('meal-posts');
 
 /* GET meals view */
-const meals = (req, res) => {
+const meals = async (req, res) => {
     res.render('meals', {
         title: 'Travlr Getaways',
-        mealposts
+        mealposts: await meal.find({})
     });
 };
 

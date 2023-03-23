@@ -16,7 +16,7 @@ require('./trips');
 require('./vacation-tips');
 
 mongoose.connection.on('connected', () => console.log('CONNECTED!'));
-mongoose.connection.on('error', () => console.log(err));
+mongoose.connection.on('error', (err) => console.log(err));
 mongoose.connection.on('disconnected', () => console.log('DISCONNECTED!'));
 
 mongoose.set('strictQuery', false);

@@ -1,12 +1,11 @@
-var fs = require('fs');
-var room = JSON.parse(fs.readFileSync('./data/rooms.json', 'utf8'));
-
+const mongoose = require('mongoose');
+const room = mongoose.model('rooms');
 
 /* GET rooms view */
-const rooms = (req, res) => {
+const rooms = async (req, res) => {
     res.render('rooms', {
         title: 'Travlr Getaways',
-        room
+        room: await room.find({})
     });
 };
 

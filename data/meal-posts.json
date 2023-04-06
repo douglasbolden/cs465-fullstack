@@ -3,21 +3,18 @@
         "mealName": "Fried Salmon Special",
         "mealType": "SEAFOOD SPECIAL",
         "image": "seafoods.jpg",
-        "link": "meals",
         "description": "I'm a product overview. Here you can write more information about your product. Buyers like to know ..."
     },
     {
         "mealName": "Choco Ice Cream Sandwich",
         "mealType": "SUMPTUOUS DESSERTS",
         "image": "desserts.jpg",
-        "link": "meals",
         "description": "I'm a product overview. Here you can write more information about your product. Buyers like to know ..."
     },
     {
         "mealName": "Mixed Buffet",
         "mealType": "BUFFET",
         "image": "buffet.jpg",
-        "link": "meals",
         "description": "I'm a product overview. Here you can write more information about your product. Buyers like to know ..."
     }
 ]

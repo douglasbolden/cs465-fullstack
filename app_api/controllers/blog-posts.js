@@ -13,6 +13,6 @@ const fetchBlogPosts = async (req, res) => {
     res.json(await blogPosts.find({}));
 };
 
-module.exports = {
+module.exports = { 
     fetchBlogPosts
 };

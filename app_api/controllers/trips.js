@@ -57,22 +57,22 @@ const updateTrip = async (req, res) => {
 }
 
 const deleteTrip = async (req, res) => {
-    const currentTrip = req.body;
-
-    if (!currentTrip) {
-        // 400 BAD REQUEST error because no Trip was sent
-        res.status(400).send('No trip record found in body of request');
-        return;
-    }
-
     try {
-        const savedTrip = await trips.create(currentTrip);
+        if (!req.params.tripCode) {
+            // If no :tripCode is provided, send a 400 BAD REQUEST error
+            res.status(400).send(':tripCode is a required parameter');
+            return;
+        }
 
-        // 201 DELETED response with the trip
-        res.status(201).json(savedTrip);
+        //deleteOne() returns 1 if successful, 0 if not
+        if ((await trips.deleteOne({ 'code': req.params.tripCode })) < 0) {
+            //No trip was found with the :tripCode, return a 404 NOT FOUND error
+            res.status(404).send(`No trip found with tripCode ${req.params.tripCode}`);
+            return;
+        }
+        res.status(200).send();
     } catch (e) {
-        //400 BAD REQUEST necause we failed to delete the trip
-        res.status(400).json(e);
+        res.status(500).json(e);
     }
 };
 

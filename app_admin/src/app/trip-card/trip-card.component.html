@@ -7,7 +7,7 @@
         <p class="card-text" [innerHTML]="trip.description"></p>
     </div>
     <div class="card-footer">
+        <button type="button" class="btn btn-danger" (click)="emitDeleteEvent()">Delete</button>
         <a [routerLink]="'/edit-trip/' + trip.code" class="btn btn-primary">Edit</a>
-        <a [routerLink]="'/delete-trip/' + trip.code" class="btn btn-primary">Delete</a>
     </div>
 </div>

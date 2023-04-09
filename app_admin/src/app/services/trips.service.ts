@@ -28,8 +28,8 @@ export class TripsService {
     return this.http.put<Trip>(`${this.API_BASE_URL}/trips/${code}`, trip);
   }
 
-  public deleteTrip(code: string): Observable<Trip> {
-    return this.http.delete<Trip>(`${this.API_BASE_URL}/trips/${code}`);
+  public deleteTrip(code: string): Observable<void> {
+    return this.http.delete<void>(`${this.API_BASE_URL}/trips/${code}`);
   }
   
 }

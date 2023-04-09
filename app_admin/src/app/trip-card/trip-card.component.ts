@@ -1,16 +1,17 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Trip } from '../models/trip';
 
 @Component({
   selector: 'app-trip-card',
   templateUrl: './trip-card.component.html',
   styleUrls: ['./trip-card.component.css']
 })
-export class TripCardComponent implements OnInit {
-  @Input('trip') trip: any;
+export class TripCardComponent {
+  @Input() trip!: Trip;
+  @Output() delete = new EventEmitter<string>();
 
-  constructor() { }
-
-  ngOnInit(): void {
-    
+  emitDeleteEvent() {
+    this.delete.next(this.trip.code);
   }
+
 }

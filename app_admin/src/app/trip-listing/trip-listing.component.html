@@ -5,6 +5,6 @@
 </div>
 <div class="row g-4">
     <div class="col-md-3" *ngFor="let trip of trips">
-        <app-trip-card [trip]="trip"></app-trip-card>
+        <app-trip-card [trip]="trip" (delete)="onTripDeleted($event)"></app-trip-card>
     </div>
 </div>

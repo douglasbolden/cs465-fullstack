@@ -15,8 +15,11 @@ require('./testimonials');
 require('./trips');
 require('./vacation-tips');
 
+// Register user models
+require('./user');
+
 mongoose.connection.on('connected', () => console.log('CONNECTED!'));
-mongoose.connection.on('error', (err) => console.log(err));
+mongoose.connection.on('error', err => console.log(err));
 mongoose.connection.on('disconnected', () => console.log('DISCONNECTED!'));
 
 mongoose.set('strictQuery', false);

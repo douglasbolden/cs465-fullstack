@@ -9,12 +9,17 @@
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
     "handlebars": "^4.7.7",
     "hbs": "^4.2.0",
     "http-errors": "~1.6.3",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.2",
     "morgan": "~1.9.1",
-    "nodemon": "^2.0.21"
+    "nodemon": "^2.0.21",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
   }
 }

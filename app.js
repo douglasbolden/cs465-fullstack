@@ -1,21 +1,17 @@
+require('dotenv').config();
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const hbs = require('hbs');
-require('./app_api/models/db');
 
-const aboutRouter = require('./app_server/routes/about');
-const contactRouter = require('./app_server/routes/contact');
-const mealsRouter = require('./app_server/routes/meals');
-const newsRouter = require('./app_server/routes/news');
-const roomsRouter = require('./app_server/routes/rooms');
-const travelRouter = require('./app_server/routes/travel');
-const usersRouter = require('./app_server/routes/users');
+require('./app_server/models/db');
+require('./app_api/config/passport');
+
+const hbs = require('hbs');
 
 const app = express();
-
 const cors = require('cors');
 const corsOptions = {
   origin: 'http://localhost:4200',
@@ -24,8 +20,13 @@ const corsOptions = {
 
 const indexRouter = require('./app_server/routes/index');
 const apiRouter = require('./app_api/routes/index');
-
-
+const aboutRouter = require('./app_server/routes/about');
+const contactRouter = require('./app_server/routes/contact');
+const mealsRouter = require('./app_server/routes/meals');
+const newsRouter = require('./app_server/routes/news');
+const roomsRouter = require('./app_server/routes/rooms');
+const travelRouter = require('./app_server/routes/travel');
+const usersRouter = require('./app_server/routes/users');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));
@@ -41,7 +42,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 app.use('/about', aboutRouter);
 app.use('/contact', contactRouter);
 app.use('/', indexRouter);
@@ -50,7 +50,6 @@ app.use('/news', newsRouter);
 app.use('/rooms', roomsRouter);
 app.use('/travel', travelRouter);
 app.use('/users', usersRouter);
-
 
 app.get('/', indexRouter);
 app.get('/contact', (req, res) => res.render('contact', {contactSelected: reqPath == '/contact'}));

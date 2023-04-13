@@ -15,7 +15,10 @@
         </li>
       </ul>
       <div class="navbar-nav d-flex">
-        <a class="nav-link" routerLink="/logout">Log out</a>
+        <a class="nav-link" routerLink="/logout" *ngIf="isLoggedIn(); else logIn">Log out</a>
+        <ng-template #logIn>
+          <a class="nav-link" routerLink="/login">Log in</a>
+        </ng-template>
       </div>
     </div>
   </div>

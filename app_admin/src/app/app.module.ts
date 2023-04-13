@@ -10,6 +10,7 @@ import { TripsService } from './services/trips.service';
 import { AddTripComponent } from './add-trip/add-trip.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditTripComponent } from './edit-trip/edit-trip.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EditTripComponent } from './edit-trip/edit-trip.component';
     TripListingComponent,
     TripCardComponent,
     AddTripComponent,
-    EditTripComponent
+    EditTripComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

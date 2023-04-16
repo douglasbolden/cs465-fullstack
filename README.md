@@ -14,23 +14,23 @@ Contents
 
 [Table of Contents](#table-of-contents)
 
-[Document Revision History](#_Toc132509226)
+[Document Revision History](#h.lnxbz9)
 
-[Executive Summary](#_Toc132509227)
+[Executive Summary](#h.35nkun2)
 
-[Design Constraints](#_Toc132509228)
+[Design Constraints](#h.1ksv4uv)
 
-[System Architecture View](#_Toc132509229)
+[System Architecture View](#h.44sinio)
 
 [Component Diagram](#component-diagram)
 
 [Sequence Diagram](#sequence-diagram)
 
-[Class Diagram](#_Toc132509232)
+[Class Diagram](#h.sd37dwow)
 
-[API Endpoints](#_Toc132509233)
+[API Endpoints](#h.2jxsxqh)
 
-[The User Interface](#_Toc132509234)
+[The User Interface](#UIGOBRRRRR)
 
 ## [Document Revision History](#_heading=h.lnxbz9)
 
@@ -95,7 +95,7 @@ There are three main components: Client, Database, and Server. This is a diagram
 
 We start with an Actor (You). The actor gets on a computer and goes to <https://(websitelink).com/(website-page)>. After having done so, the Browser pulls a client-side view/template into the browser showing the actor what information is on the webpage. When the user clicks on anything that has an anchor tag attached to it, the controller that is handling the movement between pages invokes an HTTP Client that acts as a mediator between the client-side and server-side. The HTTP Client then sends a request for information from the controller of the API information for each page. Whichever page is called is processed and the request is then sent to a MongoDB Database. This database sends all the information requested back to the user and displays it for the user to see and waits for a new request to show information as it is requested.
 
-## Class Diagram
+## [Class Diagram](#_heading=h.sd37dwow)
 
 ![Class Diagram](https://user-images.githubusercontent.com/99840792/232284039-8face0fa-bcc4-4cbd-9c57-964198116f8a.png)
 
@@ -187,7 +187,7 @@ There are 12 Classes to be Described:
 | **DELETE** | Delete single testimonial       | /api/testimonials/:testimonialCode | Deletes single testimonial instance, identified by the person passed to the request URL  |
 | **DELETE** | Delete single trip              | /api/trips/:tripCode               | Deletes single trip instance, identified by the code passed to the request URL           |
 
-## The User Interface
+## [The User Interface](#_heading=UIGOBRRRRR)
 
 This is the User Interface:
 ![User Interface](https://user-images.githubusercontent.com/99840792/232284066-503d6fcd-13e2-4d3a-ab1c-5b39cc17d6a1.png)

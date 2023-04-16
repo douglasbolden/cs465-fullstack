@@ -16,12 +16,12 @@
 						<div class="body">
 							<h1>Rooms</h1>
 							<ul id="rooms">
-								{{#each room}}
+								{{#each roomPosts}}
 								<li>
-									<a href="/rooms"><img src="images/{{image}}" alt="Img"></a>
-									<h2><a href="/rooms">{{name}}</a></h2>
-									<p>{{description}}</p>
-									<span class="rate">{{rate}}</span>
+									<a href="/api/rooms/{{this.code}}" target="_blank" rel="noopener noreferrer"><img src="images/{{this.image}}" alt="Img"></a>
+									<h2><a href="/api/rooms/{{this.code}}" target="_blank" rel="noopener noreferrer">{{this.name}}</a></h2>
+									<p>{{this.description}}</p>
+									<span class="rate">{{this.rate}}</span>
 								</li>
 								{{/each}}
 							</ul>

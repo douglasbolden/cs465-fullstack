@@ -8,6 +8,7 @@ const newsRouter = require('./news-posts');
 const roomsRouter = require('./rooms');
 const testimonialsRouter = require('./testimonials');
 const tripsRouter = require('./trips');
+const tipsRouter = require('./vacation-tips');
 
 router.use('/auth', authRouter);
 router.use('/blogs', blogsRouter);
@@ -17,5 +18,6 @@ router.use('/news', newsRouter);
 router.use('/rooms', roomsRouter);
 router.use('/testimonials', testimonialsRouter);
 router.use('/trips', tripsRouter);
+router.use('/tips', tipsRouter);
 
 module.exports = router;

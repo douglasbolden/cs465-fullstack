@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header">{{ news.postTitle }}</div>
+    <img src="assets/images/{{ news.image }}" alt="news thumbnail" />
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">{{ news.posterName }}</h6>
+        <p class="card-subtitle mt-3 mb-3 text-muted">{{ news.postDate }}</p>
+        <p class="card-text" [innerHTML]="news.postData"></p>
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-danger" (click)="emitDeleteEvent()">Delete</button>
+        <a [routerLink]="'/edit-news/' + news.code" class="btn btn-primary">Edit</a>
+    </div>
+</div>

@@ -16,13 +16,13 @@
 						<div class="body">
 							<h1>Meals</h1>
 							<ul id="foods">
-								{{#each mealposts}}
+								{{#each mealPosts}}
 								<li>
-									<h2><a href="/meals">{{mealType}}</a></h2>
+									<h2><a href="/api/meals/{{this.code}}" target="_blank" rel="noopener noreferrer">{{this.mealType}}</a></h2>
 									<div class="infos">
-										<a href="/meals"><img src="images/{{image}}" alt="Img" height="169" width="780"><span class="cover"></span></a>
+										<a href="/api/meals/{{this.code}}" target="_blank" rel="noopener noreferrer"><img src="images/{{this.image}}" alt="Img" height="169" width="780"><span class="cover"></span></a>
 										<p>
-											<span>{{mealName}}</span> {{description}}
+											<span>{{this.mealName}}</span> {{this.description}}
 										</p>
 									</div>
 								</li>

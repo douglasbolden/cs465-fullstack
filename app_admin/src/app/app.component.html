@@ -1,19 +1,41 @@
 <nav class="navbar navbar-dark navbar-expand-lg bg-dark" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/">{{ title }}</a>
+    <img src="../assets/images/logo.png" />
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs--scroll-scroll-heoght: 100ox;">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs--scroll-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+          <a class="nav-link" routerLink="/trips" *ngIf="isLoggedIn(); else hideaway">Trips</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/add-trip">Add Trip</a>
+          <a class="nav-link" routerLink="/blogs" *ngIf="isLoggedIn(); else hideaway">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/latest" *ngIf="isLoggedIn(); else hideaway">Latest</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/meals" *ngIf="isLoggedIn(); else hideaway">Meals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/news" *ngIf="isLoggedIn(); else hideaway">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/rooms" *ngIf="isLoggedIn(); else hideaway">Rooms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/testimonials" *ngIf="isLoggedIn(); else hideaway">Testimonials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/tips" *ngIf="isLoggedIn(); else hideaway">Tips</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register">Add New User</a>
         </li>
       </ul>
+      <ng-template #hideaway></ng-template>
       <div class="navbar-nav d-flex">
         <a class="nav-link" routerLink="/logout" *ngIf="isLoggedIn(); else logIn">Log out</a>
         <ng-template #logIn>

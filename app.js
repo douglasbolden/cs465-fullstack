@@ -20,8 +20,8 @@ const corsOptions = {
 
 const indexRouter = require('./app_server/routes/index');
 const apiRouter = require('./app_api/routes/index');
-const aboutRouter = require('./app_server/routes/about');
-const contactRouter = require('./app_server/routes/contact');
+const checkoutRouter = require('./app_server/routes/checkout');
+const loginRouter = require('./app_server/routes/login');
 const mealsRouter = require('./app_server/routes/meals');
 const newsRouter = require('./app_server/routes/news');
 const roomsRouter = require('./app_server/routes/rooms');
@@ -42,8 +42,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/about', aboutRouter);
-app.use('/contact', contactRouter);
+app.use('/checkout', checkoutRouter);
+app.use('/login', loginRouter);
 app.use('/', indexRouter);
 app.use('/meals', mealsRouter);
 app.use('/news', newsRouter);
@@ -52,11 +52,11 @@ app.use('/travel', travelRouter);
 app.use('/users', usersRouter);
 
 app.get('/', indexRouter);
-app.get('/contact', (req, res) => res.render('contact', {contactSelected: reqPath == '/contact'}));
+app.get('/checkout', (req, res) => res.render('checkout', {checkoutSelected: reqPath == '/checkout'}));
+app.get('/login', (req, res) => res.render('login', {loginSelected: reqPath == '/login'}));
 app.get('/rooms', (req, res) => res.render('rooms', {roomsSelected: reqPath == '/rooms'}));
 app.get('/meals', (req, res) => res.render('meals', {mealsSelected: reqPath == '/meals'}));
 app.get('/news', (req, res) => res.render('news', {newsSelected: reqPath == '/news'}));
-app.get('/about', (req, res) => res.render('about', {aboutSelected: reqPath == '/about'}));
 app.get('/travel', (req, res) => res.render('travel', {travelSelected: reqPath == '/travel'}));
 
 app.use('/api', cors(corsOptions), apiRouter);

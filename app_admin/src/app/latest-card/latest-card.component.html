@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card-header">{{ latest.code }}</div>
+    <div class="card-body">
+        <p class="card-text" [innerHTML]="latest.title"></p>
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-danger" (click)="emitDeleteEvent()">Delete</button>
+        <a [routerLink]="'/edit-latest/' + latest.code" class="btn btn-primary">Edit</a>
+    </div>
+</div>

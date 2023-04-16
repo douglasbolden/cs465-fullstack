@@ -1,0 +1,22 @@
+<h2>Add Vacation Tip Post</h2>
+<form [formGroup]="addForm" (ngSubmit)="addTip()">
+    <div class="row mb-3">
+        <label for="txtCode" class="col-sm-2 col-form-label">Vacation Tip ID</label>
+        <div class="col-sm-4">
+            <input type="text" formControlName="code" name="txtCode" id="txtCode" class="form-control" required />
+            <div *ngIf="submitted && f['code'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtTitle" class="col-sm-2 col-form-label">Vacation Tip Title</label>
+        <div class="col-sm-4">
+            <input type="text" formControlName="title" name="txtTitle" id="txtTitle" class="form-control" required />
+            <div *ngIf="submitted && f['title'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm-6 text-end">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </div>
+</form>

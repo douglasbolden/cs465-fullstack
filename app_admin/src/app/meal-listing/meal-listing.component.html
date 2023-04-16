@@ -1,0 +1,10 @@
+<div class="row mb-4">
+    <div class="col">
+        <button (click)="addMeal()" type="button" class="btn btn-primary">Add Meal</button>
+    </div>
+</div>
+<div class="row g-4">
+    <div class="col-md-3" *ngFor="let meal of meals">
+        <app-meal-card [meal]="meal" (delete)="onMealDeleted($event)"></app-meal-card>
+    </div>
+</div>

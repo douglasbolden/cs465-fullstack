@@ -45,7 +45,7 @@ export class EditTripComponent {
     if (this.editForm.valid) {
       this.tripsService.updateTrip(this.activatedRoute.snapshot.params['tripCode'], this.editForm.value)
         .subscribe({
-          next: () => this.router.navigate(['/']),
+          next: () => this.router.navigate(['/trips']),
           error: e => console.log(e)
         });
     }

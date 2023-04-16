@@ -24,9 +24,9 @@
 							<div>
 								<h3>Latest Blog</h3>
 								<ul>
-									{{#each blogposts}}
+									{{#each blogs}}
 									<li>
-										<h4><a href="/">{{this.title}}</a></h4>
+										<h4><a href="/api/blogs/{{this.code}}" target="_blank" rel="noopener noreferrer">{{this.title}}</a></h4>
 										<span>{{this.date}}</span>
 										<p>{{this.description}}</p>
 									</li>
@@ -41,7 +41,7 @@
 								<h3>Testimonials</h3>
 								{{#each testimonials}}
 								<p>
-									{{this.description}} <span>- <a href="{{this.userLink}}">{{this.person}}</a></span>
+									{{this.description}} <span>- <a href="/api/testimonials/{{this.code}}" target="_blank" rel="noopener noreferrer">{{this.person}}</a></span>
 								</p>
 								{{/each}}
 							</div>
@@ -51,7 +51,7 @@
 				<div id="sidebar">
 					{{#each pages}}
 					<div class="section">
-						<a href="/"><img src="images/{{this.image}}" alt="Img"></a>
+						<a href="/{{this.link}}"><img src="images/{{this.image}}" alt="Img"></a>
 					</div>
 					{{/each}}
 				</div>

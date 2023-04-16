@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-header">{{ meal.mealName }}</div>
+    <img src="assets/images/{{ meal.image }}" alt="meal thumbnail" />
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">{{ meal.mealType }}</h6>
+        <p class="card-text" [innerHTML]="meal.description"></p>
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-danger" (click)="emitDeleteEvent()">Delete</button>
+        <a [routerLink]="'/edit-meal/' + meal.code" class="btn btn-primary">Edit</a>
+    </div>
+</div>

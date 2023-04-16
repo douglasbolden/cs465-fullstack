@@ -36,7 +36,7 @@ export class AddTripComponent {
     if (this.addForm.valid) {
       this.tripsService.addTrip(this.addForm.value)
         .subscribe({
-          next: () => this.router.navigate(['/']),
+          next: () => this.router.navigate(['/trips']),
           error: e => console.log(e)
         });
     }

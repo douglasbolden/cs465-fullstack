@@ -1,0 +1,29 @@
+<h2>Add Testimonial Post</h2>
+<form [formGroup]="addForm" (ngSubmit)="addTestimonial()">
+    <div class="row mb-3">
+        <label for="txtCode" class="col-sm-2 col-form-label">Testimonial Post ID</label>
+        <div class="col-sm-4">
+            <input type="text" formControlName="code" name="txtCode" id="txtCode" class="form-control" required />
+            <div *ngIf="submitted && f['code'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtPerson" class="col-sm-2 col-form-label">Testimonial Poster Name</label>
+        <div class="col-sm-4">
+            <input type="text" formControlName="person" name="txtPerson" id="txtPerson" class="form-control" required />
+            <div *ngIf="submitted && f['person'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtDescription" class="col-sm-2 col-form-label">Testimonial Post Description</label>
+        <div class="col-sm-4">
+            <textarea formControlName="description" name="txtDescription" id="txtDescription" class="form-control" rows="3"></textarea>
+            <div *ngIf="submitted && f['description'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm-6 text-end">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </div>
+</form>

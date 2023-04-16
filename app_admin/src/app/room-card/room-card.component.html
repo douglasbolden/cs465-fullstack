@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-header">{{ room.name }}</div>
+    <img src="assets/images/{{ room.image }}" alt="room thumbnail" />
+    <div class="card-body">
+        <p class="card-subtitle mt-3 mb-3 text-muted">{{ room.rate }}</p>
+        <p class="card-text" [innerHTML]="room.description"></p>
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-danger" (click)="emitDeleteEvent()">Delete</button>
+        <a [routerLink]="'/edit-room/' + room.code" class="btn btn-primary">Edit</a>
+    </div>
+</div>

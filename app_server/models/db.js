@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const host = process.env.DB_HOST || '127.0.0.1';
 const conn_uri = `mongodb://${host}/travlr`;
 
-const {seed, blogSeed, latestSeed, mealSeed, newsSeed, pageSeed, roomSeed, testimonialSeed, tripSeed, tipSeed } = require('./seed');
+const {seed, blogSeed, latestSeed, mealSeed, newsSeed, pageSeed, roomSeed, testimonialSeed, tripSeed, tipSeed, userSeed } = require('./seed');
 
 // Register models
 require('./blog-posts');
@@ -16,7 +16,7 @@ require('./trips');
 require('./vacation-tips');
 
 // Register user models
-require('./user');
+require('./users');
 
 mongoose.connection.on('connected', () => console.log('CONNECTED!'));
 mongoose.connection.on('error', err => console.log(err));

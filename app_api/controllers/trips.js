@@ -28,7 +28,7 @@ const addTrip = async (req, res) => {
         // 201 CREATED response with the trip -- we send it back because it will have the MongoDB _id now
         res.status(201).json(savedTrip);
     } catch (e) {
-        //400 BAD REQUEST necause we failed to create the trip
+        //400 BAD REQUEST because we failed to create the trip
         res.status(400).json(e);
     }
 };

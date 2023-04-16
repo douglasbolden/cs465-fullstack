@@ -1,16 +1,18 @@
 var fs = require('fs');
-var blogposts = JSON.parse(fs.readFileSync('./data/blog-posts.json', 'utf8'));
 var pages = JSON.parse(fs.readFileSync('./data/pages.json', 'utf8'));
-var testimonials = JSON.parse(fs.readFileSync('./data/testimonials.json', 'utf8'));
+
+const mongoose = require('mongoose');
+const blogs = mongoose.model('blog-posts');
+const testimonials = mongoose.model('testimonials');
 
 
 /* GET homepage*/
-const index = (req, res) => {
+const index = async (req, res) => {
     res.render('index', { 
         title: 'Travlr Getaways',
-        blogposts,
+        blogs: await blogs.find({}),
         pages,
-        testimonials
+        testimonials: await testimonials.find({})
     });
 };
 

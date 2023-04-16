@@ -19,24 +19,24 @@
 								<ul>
 									{{#each latest}}
 									<li>
-										<a href="/news">{{this.title}}</a>
+										<a href="/api/latest/{{this.code}}" target="_blank" rel="noopener noreferrer">{{this.title}}</a>
 									</li>
 									{{/each}}
 								</ul>
 								<h3>Vacation Tips</h3>
 								<ul>
-									{{#each vacationTips}}
+									{{#each tips}}
 									<li>
-										<a href="/news">{{this.title}}</a>
+										<a href="/api/tips/{{this.code}}" target="_blank" rel="noopener noreferrer">{{this.title}}</a>
 									</li>
 									{{/each}}
 								</ul>
 							</div>
 							<div>
 								<h1>News</h1>
-								{{#each newsposts}}
-									<img src="images/{{this.image}}" alt="Img">
-									<h2>{{this.postTitle}}</h2>
+								{{#each news}}
+									<a href="/api/news/{{this.code}}" target="_blank" rel="noopener noreferrer"><img src="images/{{this.image}}" alt="Img"></a>
+									<a href="/api/news/{{this.code}}" target="_blank" rel="noopener noreferrer"><h2>{{this.postTitle}}</h2></a>
 									<span class="time">{{this.postDate}}<br> by: {{this.posterName}}</span>
 									{{{this.postData}}}
 								{{/each}}

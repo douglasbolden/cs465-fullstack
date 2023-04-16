@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-const room = mongoose.model('rooms');
+const roomPosts = mongoose.model('rooms');
 
 /* GET rooms view */
 const rooms = async (req, res) => {
     res.render('rooms', {
         title: 'Travlr Getaways',
-        room: await room.find({})
+        roomPosts: await roomPosts.find({})
     });
 };
 

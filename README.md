@@ -1,4 +1,4 @@
-![Travlr Getaways logo](media/91988b4b14b9a5737ccf8b5cbac1a1ae.png)
+![Travlr Getaways logo](https://user-images.githubusercontent.com/99840792/232283995-5fb10ae7-f53a-4afd-9218-e1359869ae05.png)
 
 Travlr Getaways
 
@@ -73,7 +73,8 @@ The limitations of the website will include creativity for the actual website AN
 
 ### Component Diagram
 
-![Please see the hyperlinked Word Document "CS 465 Full Stack Component Diagram Text Version" for alternative text. ](media/bdeca943802bc76c76daba613b26a021.png)
+![Component Diagram](https://user-images.githubusercontent.com/99840792/232284020-54bea48f-9e8a-4a9c-b6c3-2937ef479049.png)
+
 
 There are three main components: Client, Database, and Server. This is a diagram that describes the relationship between all of these components.
 
@@ -88,7 +89,7 @@ There are three main components: Client, Database, and Server. This is a diagram
 
 ### Sequence Diagram
 
-![Sequence Diagram](media/b7a5786c2df6315b876e4e22d2c77734.png)
+![Sequence Diagram](https://user-images.githubusercontent.com/99840792/232284034-b1dc1ac2-0127-4e48-9402-9b5dcd49bdef.png)
 
 \<Describe the flow of logic in the web application based on the sequence diagram. Be sure to describe the interactions between the layers, or tiers, of the full stack application. It will be helpful to include significant processes such as Sign In, Trips, and Admin interactions when referring to the sequence diagram.\>
 
@@ -96,7 +97,7 @@ We start with an Actor (You). The actor gets on a computer and goes to <https://
 
 ## Class Diagram
 
-![Diagram, schematic Description automatically generated](media/7b2bebd8faf39d3d554ee1a740c87f18.png)
+![Class Diagram](https://user-images.githubusercontent.com/99840792/232284039-8face0fa-bcc4-4cbd-9c57-964198116f8a.png)
 
 There are 12 Classes to be Described:
 
@@ -188,19 +189,19 @@ There are 12 Classes to be Described:
 
 ## The User Interface
 
-This is the UI:![](media/5d68e78e70f4bca354bb73041b35b2c1.png)
+This is the User Interface:
+![User Interface](https://user-images.githubusercontent.com/99840792/232284066-503d6fcd-13e2-4d3a-ab1c-5b39cc17d6a1.png)
 
 This is what is looks like when a trip is added:
-
-![](media/62a5baf3c9443449fed0562a6d5a5f10.png)
+![Added Trip](https://user-images.githubusercontent.com/99840792/232284083-d7f1d9c6-1c0a-434d-8225-6ec0576f88cd.png)
 
 This is the edit screen for a trip:
 
-![](media/d784f80897f8e08d6139ff68f918e894.png)
+![Edit Screen](https://user-images.githubusercontent.com/99840792/232284093-1f8b8562-57f4-4d79-aff3-686f0ba406d7.png)
 
 This is the updated MPA screen with the trip added:
 
-![](media/e228a9250f2b8d67b61c888d96b811cd.png)
+![Updated MPA with added trip](https://user-images.githubusercontent.com/99840792/232284108-bb6416a8-2249-4d4a-b9c5-6d7932bbbee4.png)
 
 Angular has a vastly different look when compared to the Express (Hyper-Text Markup Language) HTML customer-facing page, as the entire purpose of the Angular page is to view a Single-Page Application (SPA) while the Express HTML customer-facing page is a Multi-Page Application (MPA). In the MPA, all the information that is in the HTML portion of the website is in the form of Express, HTML, and Handlebars. These three frameworks create webpages that display what the customer sees. In the SPA, all the information that is in the HTML portion of the website is in the form of Angular and Cross-origin resource sharing (CORS). CORS “is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources” (*Cross-origin resource sharing (CORS) - http: MDN* 2023). These two frameworks work together to make a webpage that shows only the trips on the website that allows someone to add and delete trips in the application without showing them anything else on the website. Angular uses the MVVM (Model-View-ViewModel) architecture. This allows the View to be passed to and from the ViewModel through databinding. The viewmodel is passed directly to the model, and the model sends back the logic and data asynchronously. Express uses the MVC (Model-View-Controller) architecture. In MVC, the model defines all data structures, is manipulated by the controller, and updates the view. The view (User Interface) is sometimes updated directly from the controller, receives updates from the model, and sends input to the controller. Finally, the controller, which obviously holds all control logic, manipulates the model, receives input from the user, and sometimes updates the view directly.
 
@@ -208,11 +209,11 @@ The SPA allows the user to see all the information that is available from the da
 
 The process of testing the SPA database is simple. The first thing that you will need is an application known as Postman. When you are in Postman, create a new collection and then sequentially create a new request. In the ribbon at the top of this request window, you will need to input the location of the API that you are going to be testing. In this case, it is ‘http://localhost:3000/api/trips’. To the left of the ribbon, you will see a dropdown menu. Select GET to display all of the information that is currently on the database. Select POST to add a new trip passing in some trip information in the ‘body’ of the request.
 
-![](media/36bb196907530ad4cbf14213320cfafe.png)
+![POST request on Postman](https://user-images.githubusercontent.com/99840792/232284124-edafcf8f-7bc7-4c1d-b77f-643499981291.png)
 
 Select PUT to update a trip, you will need to update the link to reflect the trip that you want to update. In this case, it would be “http://localhost:3000/api/trips/TEST2”. Change the parameters of the body again to what you want, and it will be updated accordingly.
 
-![](media/b1b77b3f8221316b76aeb465608ccecb.png)
+![PUT request on Postman](https://user-images.githubusercontent.com/99840792/232284174-1927f207-5743-4d78-82ad-ccb65b81752c.png)
 
 When you try to GET the database information again, this will now be updated with what you passed in the body. You may get authentication errors, data validation errors, data retrieval errors, network errors, syntax errors, and possibly, though in our case not so much, connection errors. If you aren’t allowed to see the information on the database, you will get multiple errors. If you don’t type things in correctly, you will get multiple errors. All these errors can be fixed easily, however. Just make sure that what you are passing is formatted correctly.
 

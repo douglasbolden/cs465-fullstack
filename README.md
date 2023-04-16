@@ -14,23 +14,23 @@ Contents
 
 [Table of Contents](#table-of-contents)
 
-[Document Revision History](#h.lnxbz9)
+[Document Revision History](#document-revision-history)
 
-[Executive Summary](#h.35nkun2)
+[Executive Summary](#executive-summary)
 
-[Design Constraints](#h.1ksv4uv)
+[Design Constraints](#design-constraints)
 
-[System Architecture View](#h.44sinio)
+[System Architecture View](#system-architecture-view)
 
 [Component Diagram](#component-diagram)
 
 [Sequence Diagram](#sequence-diagram)
 
-[Class Diagram](#h.sd37dwow)
+[Class Diagram](#class-diagram)
 
-[API Endpoints](#h.2jxsxqh)
+[API Endpoints](#api-endpoints)
 
-[The User Interface](#UIGOBRRRRR)
+[The User Interface](#the-user-interface)
 
 ## [Document Revision History](#_heading=h.lnxbz9)
 
@@ -147,7 +147,7 @@ There are 12 Classes to be Described:
     2.  Public int totalmiles.
     3.  Public string stopover.
 
-## [API](#_heading=h.2jxsxqh) Endpoints
+## [API Endpoints](#_heading=h.2jxsxqh)
 
 | **Method** | **Purpose**                     | **URL**                            | **Notes**                                                                                |
 |------------|---------------------------------|------------------------------------|------------------------------------------------------------------------------------------|

@@ -38,7 +38,7 @@ Contents
 |---------|------------|----------------|-----------------------------|
 | 4.0     | 04/16/2023 | Douglas Bolden | Final Commit – MAJOR UPDATE |
 
-## [Executive Summary](#_heading=h.35nkun2)
+## [Executive Summary]
 
 The framework that will be utilized for the creation of the Travlr Getaways website is known as the MEAN stack. This is an abbreviation that stands for MongoDB, Express.js, Angular.js, and Node.js. These four technologies allow the creation of the website while allowing JSON to be handled extremely efficiently. This in turn allows the developers to complete the job correctly, and in timely manner. The architecture of the MEAN stack is efficient.
 
@@ -52,7 +52,7 @@ The customer-facing side of the application will allow users to view the trips t
 
 The administrator single-page application, or SPA, will be a SINGLE page with all the information from the website loaded onto it and ready to view from the server for each page. The SPA (Single Page Application) is built utilizing the Angular.js framework. This will make all pages much easier to edit and will allow the administrators access to adding/deleting new posts and information that becomes immediately available for all users, as they need it.
 
-## [Design Constraints](#_heading=h.1ksv4uv)
+## [Design Constraints]
 
 The limitations of the website will include creativity for the actual website AND:
 
@@ -69,7 +69,7 @@ The limitations of the website will include creativity for the actual website AN
 -   Node.js
     -   Node.js allows us to be scalable, so that we can bring in all the customers without issue, if it is combined with MongoDB.
 
-## [System Architecture View](#_heading=h.44sinio)
+## [System Architecture View]
 
 ### Component Diagram
 
@@ -95,7 +95,7 @@ There are three main components: Client, Database, and Server. This is a diagram
 
 We start with an Actor (You). The actor gets on a computer and goes to <https://(websitelink).com/(website-page)>. After having done so, the Browser pulls a client-side view/template into the browser showing the actor what information is on the webpage. When the user clicks on anything that has an anchor tag attached to it, the controller that is handling the movement between pages invokes an HTTP Client that acts as a mediator between the client-side and server-side. The HTTP Client then sends a request for information from the controller of the API information for each page. Whichever page is called is processed and the request is then sent to a MongoDB Database. This database sends all the information requested back to the user and displays it for the user to see and waits for a new request to show information as it is requested.
 
-## [Class Diagram](#_heading=h.sd37dwow)
+## [Class Diagram]
 
 ![Class Diagram](https://user-images.githubusercontent.com/99840792/232284039-8face0fa-bcc4-4cbd-9c57-964198116f8a.png)
 
@@ -147,7 +147,7 @@ There are 12 Classes to be Described:
     2.  Public int totalmiles.
     3.  Public string stopover.
 
-## [API Endpoints](#_heading=h.2jxsxqh)
+## [API Endpoints]
 
 | **Method** | **Purpose**                     | **URL**                            | **Notes**                                                                                |
 |------------|---------------------------------|------------------------------------|------------------------------------------------------------------------------------------|
@@ -187,7 +187,7 @@ There are 12 Classes to be Described:
 | **DELETE** | Delete single testimonial       | /api/testimonials/:testimonialCode | Deletes single testimonial instance, identified by the person passed to the request URL  |
 | **DELETE** | Delete single trip              | /api/trips/:tripCode               | Deletes single trip instance, identified by the code passed to the request URL           |
 
-## [The User Interface](#_heading=UIGOBRRRRR)
+## [The User Interface]
 
 This is the User Interface:
 ![User Interface](https://user-images.githubusercontent.com/99840792/232284066-503d6fcd-13e2-4d3a-ab1c-5b39cc17d6a1.png)

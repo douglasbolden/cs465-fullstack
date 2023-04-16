@@ -1,0 +1,10 @@
+<div class="row mb-4">
+    <div class="col">
+        <button (click)="addTip()" type="button" class="btn btn-primary">Add Tip</button>
+    </div>
+</div>
+<div class="row g-4">
+    <div class="col-md-3" *ngFor="let tip of tips">
+        <app-tip-card [tip]="tip" (delete)="onTipDeleted($event)"></app-tip-card>
+    </div>
+</div>

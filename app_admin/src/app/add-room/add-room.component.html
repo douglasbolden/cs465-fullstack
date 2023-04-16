@@ -1,0 +1,43 @@
+<h2>Add Room Post</h2>
+<form [formGroup]="addForm" (ngSubmit)="addRoom()">
+    <div class="row mb-3">
+        <label for="txtCode" class="col-sm-2 col-form-label">Room ID</label>
+        <div class="col-sm-4">
+            <input type="text" formControlName="code" name="txtCode" id="txtCode" class="form-control" required />
+            <div *ngIf="submitted && f['code'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtName" class="col-sm-2 col-form-label">Room Name</label>
+        <div class="col-sm-4">
+            <input type="text" formControlName="name" name="txtName" id="txtName" class="form-control" required />
+            <div *ngIf="submitted && f['name'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtRate" class="col-sm-2 col-form-label">Room Rate</label>
+        <div class="col-sm-4">
+            <input type="text" formControlName="rate" name="txtRate" id="txtRate" class="form-control" required />
+            <div *ngIf="submitted && f['rate'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtImage" class="col-sm-2 col-form-label">Room Image</label>
+        <div class="col-sm-4">
+            <input type="text" formControlName="image" name="txtImage" id="txtImage" class="form-control" required />
+            <div *ngIf="submitted && f['image'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtDescription" class="col-sm-2 col-form-label">Room Description</label>
+        <div class="col-sm-4">
+            <textarea formControlName="description" name="txtDescription" id="txtDescription" class="form-control" rows="3"></textarea>
+            <div *ngIf="submitted && f['description'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm-6 text-end">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,36 @@
+<h2>Add Blog Post</h2>
+<form [formGroup]="addForm" (ngSubmit)="addBlog()">
+    <div class="row mb-3">
+        <label for="txtCode" class="col-sm-2 col-form-label">Blog ID</label>
+        <div class="col-sm-4">
+            <input type="text" formControlName="code" name="txtCode" id="txtCode" class="form-control" required />
+            <div *ngIf="submitted && f['code'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtTitle" class="col-sm-2 col-form-label">Blog Title</label>
+        <div class="col-sm-4">
+            <input type="text" formControlName="title" name="txtTitle" id="txtTitle" class="form-control" required />
+            <div *ngIf="submitted && f['title'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtDate" class="col-sm-2 col-form-label">Blog Date</label>
+        <div class="col-sm-4">
+            <input type="date" [value]="f['date'].value | date: 'yyyy-MM-dd'" formControlName="date" name="txtDate" id="txtDate" class="form-control" required />
+            <div *ngIf="submitted && f['date'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="txtDescription" class="col-sm-2 col-form-label">Blog Description</label>
+        <div class="col-sm-4">
+            <textarea formControlName="description" name="txtDescription" id="txtDescription" class="form-control" rows="3"></textarea>
+            <div *ngIf="submitted && f['description'].errors?.['required']" class="text-danger">Oops</div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-sm-6 text-end">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="card-header">{{ blog.title }}</div>
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">{{ blog.date }}</h6>
+        <p class="card-text" [innerHTML]="blog.description"></p>
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-danger" (click)="emitDeleteEvent()">Delete</button>
+        <a [routerLink]="'/edit-blog/' + blog.code" class="btn btn-primary">Edit</a>
+    </div>
+</div>

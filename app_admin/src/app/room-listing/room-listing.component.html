@@ -1,0 +1,10 @@
+<div class="row mb-4">
+    <div class="col">
+        <button (click)="addRoom()" type="button" class="btn btn-primary">Add Room</button>
+    </div>
+</div>
+<div class="row g-4">
+    <div class="col-md-3" *ngFor="let room of rooms">
+        <app-room-card [room]="room" (delete)="onRoomDeleted($event)"></app-room-card>
+    </div>
+</div>

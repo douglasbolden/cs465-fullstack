@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 ml-auto mr-auto">
+            <div class="alert alert-danger" role="alert" *ngIf="!!loginError">{{ loginError }}</div>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div class="mb-3">
+                    <label for="txtEmail">E-mail</label>
+                    <input type="email" class="form-control" formControlName="email" name="txtEmail" id="txtEmail" required />
+                    <div *ngIf="submitted && f['email'].errors?.['required']" class="text-danger">E-mail is required</div>
+                </div>
+                <div class="mb-3">
+                    <label for="txtPassword">Password</label>
+                    <input type="password" class="form-control" formControlName="password" name="txtPassword" id="txtPassword" required />
+                    <div *ngIf="submitted && f['password'].errors?.['required']" class="text-danger">Password is required</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Log in</button>
+            </form>
+        </div>
+    </div>
+</div>

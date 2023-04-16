@@ -1,0 +1,10 @@
+<div class="row mb-4">
+    <div class="col">
+        <button (click)="addLatest()" type="button" class="btn btn-primary">Add Latest</button>
+    </div>
+</div>
+<div class="row g-4">
+    <div class="col-md-3" *ngFor="let latest of latest">
+        <app-latest-card [latest]="latest" (delete)="onLatestDeleted($event)"></app-latest-card>
+    </div>
+</div>

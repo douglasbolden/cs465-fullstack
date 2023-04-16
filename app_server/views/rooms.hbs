@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Rooms - Travlr Getaways Website Template</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			{{> header}}
+			<div id="contents">
+				<div class="box">
+					<div>
+						<div class="body">
+							<h1>Rooms</h1>
+							<ul id="rooms">
+								{{#each roomPosts}}
+								<li>
+									<a href="/api/rooms/{{this.code}}" target="_blank" rel="noopener noreferrer"><img src="images/{{this.image}}" alt="Img"></a>
+									<h2><a href="/api/rooms/{{this.code}}" target="_blank" rel="noopener noreferrer">{{this.name}}</a></h2>
+									<p>{{this.description}}</p>
+									<span class="rate">{{this.rate}}</span>
+								</li>
+								{{/each}}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{> footer}}
+	</div>
+</body>
+</html>

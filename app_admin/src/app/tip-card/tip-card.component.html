@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card-header">{{ tip.code}}</div>
+    <div class="card-body">
+        <p class="card-text" [innerHTML]="tip.title"></p>
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-danger" (click)="emitDeleteEvent()">Delete</button>
+        <a [routerLink]="'/edit-tip/' + tip.code" class="btn btn-primary">Edit</a>
+    </div>
+</div>

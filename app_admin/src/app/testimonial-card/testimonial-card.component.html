@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="card-header">{{ testimonial.code }}</div>
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">{{ testimonial.person }}</h6>
+        <p class="card-text" [innerHTML]="testimonial.description"></p>
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-danger" (click)="emitDeleteEvent()">Delete</button>
+        <a [routerLink]="'/edit-testimonial/' + testimonial.code" class="btn btn-primary">Edit</a>
+    </div>
+</div>

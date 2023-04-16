@@ -1,0 +1,10 @@
+<div class="row mb-4">
+    <div class="col">
+        <button (click)="addTestimonial()" type="button" class="btn btn-primary">Add Testimonial</button>
+    </div>
+</div>
+<div class="row g-4">
+    <div class="col-md-3" *ngFor="let testimonial of testimonials">
+        <app-testimonial-card [testimonial]="testimonial" (delete)="onTestimonialDeleted($event)"></app-testimonial-card>
+    </div>
+</div>

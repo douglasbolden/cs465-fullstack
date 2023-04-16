@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>News - Travlr Getaways Website Template</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div id="background">
+		<div id="page">
+			{{> header}}
+			<div id="contents">
+				<div class="box">
+					<div>
+						<div id="news" class="body">
+							<div class="sidebar">
+								<h3>Latest News</h3>
+								<ul>
+									{{#each latest}}
+									<li>
+										<a href="/api/latest/{{this.code}}" target="_blank" rel="noopener noreferrer">{{this.title}}</a>
+									</li>
+									{{/each}}
+								</ul>
+								<h3>Vacation Tips</h3>
+								<ul>
+									{{#each tips}}
+									<li>
+										<a href="/api/tips/{{this.code}}" target="_blank" rel="noopener noreferrer">{{this.title}}</a>
+									</li>
+									{{/each}}
+								</ul>
+							</div>
+							<div>
+								<h1>News</h1>
+								{{#each news}}
+									<a href="/api/news/{{this.code}}" target="_blank" rel="noopener noreferrer"><img src="images/{{this.image}}" alt="Img"></a>
+									<a href="/api/news/{{this.code}}" target="_blank" rel="noopener noreferrer"><h2>{{this.postTitle}}</h2></a>
+									<span class="time">{{this.postDate}}<br> by: {{this.posterName}}</span>
+									{{{this.postData}}}
+								{{/each}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{> footer}}
+	</div>
+</body>
+</html>

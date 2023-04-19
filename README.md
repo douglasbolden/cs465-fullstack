@@ -32,7 +32,9 @@ Contents
 
 [The User Interface](#the-user-interface)
 
-## [Document Revision History](#_heading=h.lnxbz9)
+[Journal: Portfolio Submission](#journal-portfolio-submission)
+
+## [Document Revision History](#document-revision)
 
 | Version | Date       | Author         | Comments                    |
 |---------|------------|----------------|-----------------------------|
@@ -90,8 +92,6 @@ There are three main components: Client, Database, and Server. This is a diagram
 ### Sequence Diagram
 
 ![Sequence Diagram](https://user-images.githubusercontent.com/99840792/232284034-b1dc1ac2-0127-4e48-9402-9b5dcd49bdef.png)
-
-\<Describe the flow of logic in the web application based on the sequence diagram. Be sure to describe the interactions between the layers, or tiers, of the full stack application. It will be helpful to include significant processes such as Sign In, Trips, and Admin interactions when referring to the sequence diagram.\>
 
 We start with an Actor (You). The actor gets on a computer and goes to <https://(websitelink).com/(website-page)>. After having done so, the Browser pulls a client-side view/template into the browser showing the actor what information is on the webpage. When the user clicks on anything that has an anchor tag attached to it, the controller that is handling the movement between pages invokes an HTTP Client that acts as a mediator between the client-side and server-side. The HTTP Client then sends a request for information from the controller of the API information for each page. Whichever page is called is processed and the request is then sent to a MongoDB Database. This database sends all the information requested back to the user and displays it for the user to see and waits for a new request to show information as it is requested.
 
@@ -216,6 +216,21 @@ Select PUT to update a trip, you will need to update the link to reflect the tri
 ![PUT request on Postman](https://user-images.githubusercontent.com/99840792/232284174-1927f207-5743-4d78-82ad-ccb65b81752c.png)
 
 When you try to GET the database information again, this will now be updated with what you passed in the body. You may get authentication errors, data validation errors, data retrieval errors, network errors, syntax errors, and possibly, though in our case not so much, connection errors. If you aren’t allowed to see the information on the database, you will get multiple errors. If you don’t type things in correctly, you will get multiple errors. All these errors can be fixed easily, however. Just make sure that what you are passing is formatted correctly.
+
+## [Journal: Portfolio Submission]
+
+The MEAN stack is a great tool to use, though I have seen that another version of it is the MERN stack. The MEAN stack consists of MongoDB, Express.JS, Angular.JS, and Node.JS, while the MERN stack instead replaces Angular.JS with React.JS. After some research, it seems that the MERN stack is a bit easier to work with, though I have come to like the MEAN stack.
+
+Anyway, MongoDB is essential, as it is used to store data. Databases are essential for security. ANY FORM of data should be in a database if possible. MongoDB works exceptionally well with Express.JS, Angular.JS and Node.JS. This makes it an important tool while developing a website.
+The MPA was using Express's HTML, Javascript and handlebars. This allowed the main pages to be displayed to customers in a friendly, professional manner. THE SPA was developed utilising Angular.JS and JavaScript. Though it may be easier to view pages in the Express MPA view of the website, handling the data execution and data on the site is superior on the Angular SPA.
+
+JSON is a backbone for this project as it holds some of the information that is used on the website. Handlebars utilizes the various JSON in the files to set up parts of the customer-facing website, while Angular.JS and MongoDB utilize them to set up the SPA. Instances of this come in the form of MongoDB databases. The database is updated by the JSON, and upon loading all of this in, the website is updated through Handlebars depending on what is located in the JSON files.
+
+Security is the most important part of a web application. If you have no security, you will have no customers. Who would want to give personal information to a villain? When you have a secure, well-performing site, people feel more inclined to do business with you. Speaking of things that are important, the endpoints of a website are extremely important. Not a single person wants to go to a link that ends with 123498612348###75128476#23478#Q37r#687. That seems very suspicious to most people. Naming links with naming information that makes sense and looks good are important. The most demanding thing to a developer is to understand how methods work. In the case of this site, all of the methods that are implemented allow the website to complete various tasks. The most important methods for this site are the CRUD functionality methods. These allow the user to CREATE, READ, UPDATE, and DELETE. Without this, the website is essentially a security hazard if you have any personal data on it.
+
+This course has helped me reach my professional goals by allowing me the ability to be involved in active development of a website. I find this to be the most important part of a job, Hands-on Experience. Through this class, I have learned new skills and have demonstrated that I have a great understanding of the information that was provided. I hope that you have found this to be a useful demonstration of my ability to understand ambiguous topics and allow me a chance to prove my merit with any job offer that I may recieve.
+
+Thank You for reading!
 
 References
 
